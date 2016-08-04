@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Rocket</title>
+    <script src="../aframe.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <img id="space" src="space.jpg">
+      </a-assets>
+
+
+      <a-box
+        position="0 4 -12"
+        opacity="0"
+      >
+       
+        <a-animation
+          dur="3000"
+          from="0 0 15"
+          to="0 360 15"
+          easing="linear"
+          attribute="rotation"
+          repeat="infinite"
+        ></a-animation>
+
+        <a-cone
+          color="#2B4162"
+          radius-bottom="0.2"
+          radius-top="0.05"
+          position="0 3.15 0"
+          height="0.3"
+        >
+        </a-cone>
+
+        <a-cone
+          color="#2B4162"
+          radius-bottom="0.7"
+          radius-top="0.2"
+          position="0 2.5 0"
+          height="1"
+        >
+        </a-cone>
+
+        <a-cone
+          color="#2B4162"
+          radius-bottom="2"
+          radius-top="0.7"
+          position="0 0 0"
+          height="4"
+        ></a-cone>
+
+        <a-cone
+          color="#2B4162"
+          radius-bottom="1.9"
+          radius-top="2"
+          position="0 -3 0"
+          height="2"
+        ></a-cone>
+
+        <a-cone
+          color="#2B4162"
+          radius-bottom="1"
+          radius-top="1.9"
+          position="0 -4.5 0"
+          height="1"
+        ></a-cone>
+
+        <a-cone
+          color="#999"
+          radius-bottom="1"
+          radius-top="0.8"
+          position="0 -5.2 0"
+          height="0.5"
+        ></a-cone>
+
+        <a-torus
+          color="#F05D5E"
+          position="0 -6 0"
+          segments-radial="50"
+          segments-tubular="10"
+          radius="3"
+          radius-tubular="0.18"
+          arc="60"
+        ></a-torus>
+
+        <a-torus
+          color="#F05D5E"
+          position="0 -6 0"
+          segments-radial="50"
+          segments-tubular="10"
+          radius="3"
+          radius-tubular="0.18"
+          rotation="0 120 0"
+          arc="60"
+        ></a-torus>
+
+        <a-torus
+          color="#F05D5E"
+          position="0 -6 0"
+          segments-radial="50"
+          segments-tubular="10"
+          radius="3"
+          radius-tubular="0.18"
+          rotation="0 240 0"
+          arc="60"
+        ></a-torus>
+
+      </a-box>
+
+      <a-light type="spot" color="#666" position="-20 0 0" look-at="a-box"></a-light>
+      <a-light type="point" color="#CCC" position="0 5 0"></a-light>
+
+      <a-sky
+        src="#space"
+        rotation="0 -130 0"
+      ></a-sky>
+    </a-scene>
+  </body>
+</html>
